@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SearchBar from "./components/SearchBar";
 import CurrentWeather from "./components/CurrentWeather";
 import Forecast from "./components/Forecast";
@@ -24,6 +24,11 @@ function App() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    handleSearch("delhi");
+  }
+  , []);
 
   return (
     <div className="min-h-screen  p-4 flex flex-col items-center">

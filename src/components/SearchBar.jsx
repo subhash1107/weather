@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const SearchBar = ({ onSearch }) => {
-  const [city, setCity] = useState("delhi");
+  const [city, setCity] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
